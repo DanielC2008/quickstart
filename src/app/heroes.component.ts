@@ -15,6 +15,7 @@ import { Router }            from '@angular/router'
   styleUrls: ['./heroes.component.css']
 })
 
+//OnInit is a life cycle hook, there are others that can help you load data at specific times https://angular.io/guide/lifecycle-hooks
 export class HeroesComponent implements OnInit {
   //array of objs of type hero
   heroes: Hero[];
