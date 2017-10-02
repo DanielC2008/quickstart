@@ -7,4 +7,7 @@
     </div>
   </div>
 </div>
-<hero-search></hero-search>
+<hero-search (emitHero)='heroEmitted($event)'></hero-search>
+<div >
+    {{lastSearch}}
+</div> 

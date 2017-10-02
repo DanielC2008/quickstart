@@ -18,4 +18,10 @@ export class DashboardComponent implements OnInit {
       this.heroes = heroes.slice(1, 5)
     })
   }
+
+  heroEmitted(hero: Hero): void {
+    let name: string = hero.name
+    console.log(name)
+    console.log(name, ` was your last Hero, this was sent from a child componet, to a Parent`)
+  }
 }

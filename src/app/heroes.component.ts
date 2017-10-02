@@ -5,8 +5,8 @@ import { Router }            from '@angular/router'
 
 
 //A decorator is just an expression that will be evaluated and has to return a function.
-//the decorator runs the Component code while adding the things we pass to it.
-//then this all becomes available to the component below which we wrap up and send off to the rest of the app 
+//the decorator gives the HeroesComponent all of its structure including the metadata without changing the properties we have establised on the component.
+ //A component is a directive-with-a-template; a @Component decorator is actually a @Directive decorator extended with template-oriented features.
 @Component({
   //metadata that will decorate a class
   selector: 'my-heroes',
@@ -21,7 +21,7 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
   //of type Hero
   selectedHero: Hero;
-  //builds obj with prop heroService from hero service
+  //constructors builds props with values on the component. It is specifically helpful for accessing a service through dependency injection
   constructor(
     private heroService: HeroService, 
     private router: Router

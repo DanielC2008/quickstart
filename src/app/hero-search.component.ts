@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
@@ -31,7 +31,10 @@ import { Hero } from './hero';
     heroes: Observable<Hero[]>;
    //this is how we produce a new observable of type string
     private searchTerms = new Subject<string>();
-   
+
+   //outputs use to communicate from child to parent
+    @Output() emitHero: EventEmitter<Hero> = new EventEmitter()
+
     constructor( 
       private heroSearchService: HeroSearchService,
       private router: Router
@@ -63,6 +66,7 @@ import { Hero } from './hero';
     gotoDetail(hero: Hero): void {
       let link = ['/detail', hero.id];
       this.router.navigate(link)
+      this.emitHero.emit(hero)
     }
 
   }

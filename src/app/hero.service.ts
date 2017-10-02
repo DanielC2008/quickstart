@@ -1,4 +1,9 @@
 import { Injectable }    from '@angular/core';
+//ABOUT HTTP in A4  
+  // Angular can Two types of errors -
+    // If the backend returns an unsuccessful response like - 404, 500 and so on
+    // If something goes wrong in the client side like -network error etc.
+  //Also you can implment caching with the client interceptors and attempts to retry with rxjs
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise'; //toPromise()
 import { Hero }          from './hero';

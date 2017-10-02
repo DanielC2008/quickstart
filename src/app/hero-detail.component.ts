@@ -11,8 +11,8 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./hero-detail.component.css']
 })
 
-//inputs allow data binding trust between two components
 export class HeroDetailComponent implements OnInit{
+//inputs allow data binding trust between two components
   @Input() hero: Hero;
 
   constructor (

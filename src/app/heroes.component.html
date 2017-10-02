@@ -4,6 +4,8 @@
     <button (click)="add(heroName.value); heroName.value=''" >Add</button>
   </div>
   <ul class="heroes">
+    <!-- Structural directives like ngFor alter layout by adding, removing, and replacing elements in DOM. -->
+    <!-- Attribute directives like model alter the appearance or behavior of an existing element. -->
     <li 
     *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
